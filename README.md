@@ -6,4 +6,4 @@ This repo includes config files for the following apps:
 * vim
 * sublime
 * zsh
-
+* git
