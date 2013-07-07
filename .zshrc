@@ -40,3 +40,6 @@ export PATH=$PATH:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:.
 
 RPROMPT="$pfg_cyan%~$pR"
 export CDPATH=.:~:~/Documents/repositories
+__git_files () {
+    _wanted files expl 'local files' _files
+}
