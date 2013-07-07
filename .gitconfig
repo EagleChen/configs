@@ -1,0 +1,25 @@
+[user]
+	name = Eagle Chen
+	email = yanguangchen@vmware.com
+[color]
+	status = auto
+	branch = auto
+	diff   = auto
+	interactive = auto
+	ui = auto
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[alias]
+	dt = difftool
+[color "diff"]
+	whitespace = red reverse
+[credential]
+	helper = osxkeychain
+[core]
+	editor = /usr/bin/vim
+[push]
+	default = simple
