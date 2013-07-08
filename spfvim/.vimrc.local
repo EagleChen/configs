@@ -1,2 +1,5 @@
 UnBundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Yggdroot/indentLine'
+
+autocmd FileType ruby autocmd BufWritePre <buffer> call StripTrailingWhitespace()
+autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
