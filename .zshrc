@@ -30,6 +30,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
+plugins=(git ruby)
 source $ZSH/oh-my-zsh.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
@@ -40,6 +41,3 @@ export PATH=$PATH:/usr/local/bin:/usr/X11/bin:/usr/local/git/bin:.
 
 RPROMPT="$pfg_cyan%~$pR"
 export CDPATH=.:~:~/Documents/repositories
-__git_files () {
-    _wanted files expl 'local files' _files
-}
