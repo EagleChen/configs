@@ -5,3 +5,6 @@ autocmd FileType ruby autocmd BufWritePre <buffer> call StripTrailingWhitespace(
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
 
 let g:indentLine_color_term = 237
+
+set nobackup
+set noswapfile
