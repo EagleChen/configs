@@ -49,3 +49,4 @@ function git_prompt_info() {
 
 # disable autocorrect
 unsetopt correct
+unsetopt correct_all
