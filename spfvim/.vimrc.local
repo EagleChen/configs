@@ -8,3 +8,6 @@ let g:indentLine_color_term = 237
 
 set nobackup
 set noswapfile
+
+" syntastic can not handle java packages, disable it
+let syntastic_java_checkers = []
