@@ -44,3 +44,6 @@ export CDPATH=.:~:~/Documents/repositories
 # disable autocorrect
 unsetopt correct
 unsetopt correct_all
+
+# solve cd slowness problem
+unsetopt cdablevars
