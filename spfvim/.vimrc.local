@@ -1,6 +1,14 @@
 UnBundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Yggdroot/indentLine'
 
+UnBundle 'vim-scripts/sessionman.vim'
+UnBundle 'Lokaltog/vim-easymotion'
+UnBundle 'mbbill/undotree'
+UnBundle 'myusuf3/numbers.vim'
+UnBundle 'mattn/webapi-vim'
+UnBundle 'mattn/gist-vim'
+UnBundle 'scrooloose/nerdcommenter'
+
 autocmd FileType ruby autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
 
@@ -11,3 +19,5 @@ set noswapfile
 
 " syntastic can not handle java packages, disable it
 let syntastic_java_checkers = []
+
+set wrap
