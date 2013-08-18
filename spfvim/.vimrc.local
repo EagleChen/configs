@@ -1,6 +1,9 @@
 UnBundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Yggdroot/indentLine'
 
+UnBundle 'scrooloose/nerdtree'
+UnBundle 'tpope/vim-surround'
+UnBundle 'jistr/vim-nerdtree-tabs'
 UnBundle 'vim-scripts/sessionman.vim'
 UnBundle 'Lokaltog/vim-easymotion'
 UnBundle 'mbbill/undotree'
@@ -8,6 +11,12 @@ UnBundle 'myusuf3/numbers.vim'
 UnBundle 'mattn/webapi-vim'
 UnBundle 'mattn/gist-vim'
 UnBundle 'scrooloose/nerdcommenter'
+UnBundle 'vim-scripts/restore_view.vim'
+UnBundle 'airblade/vim-gitgutter'
+UnBundle 'tpope/vim-abolish.git'
+UnBundle 'godlygeek/tabular'
+UnBundle 'majutsushi/tagbar'
+UnBundle 'terryma/vim-multiple-cursors'
 
 autocmd FileType ruby autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
@@ -21,3 +30,17 @@ set noswapfile
 let syntastic_java_checkers = []
 
 set wrap
+
+" create tags file in .git directory for current filetype from inside vim
+function! CreateTagsFile() abort
+  let dir = fugitive#extract_git_dir(getcwd())
+  if dir !=# ''
+    let dir = substitute(dir, "\.git.*", '', '')
+    let status = system('cd ' . dir . '; touch .git/tags; ctags --tag-relative -aRf .git/tags --exclude=.git --exclude=.blobs --languages=' . &filetype . ' .')
+    if status ==# ''
+      let status = 'Tags file created successfully'
+    endif
+    echo status
+  endif
+endfunction
+noremap <silent> <Leader>ct :call CreateTagsFile()<CR>
