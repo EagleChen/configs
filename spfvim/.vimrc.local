@@ -17,6 +17,7 @@ UnBundle 'tpope/vim-abolish.git'
 UnBundle 'godlygeek/tabular'
 UnBundle 'majutsushi/tagbar'
 UnBundle 'terryma/vim-multiple-cursors'
+UnBundle 'mileszs/ack.vim'
 
 autocmd FileType ruby autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
