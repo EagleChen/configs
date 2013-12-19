@@ -18,9 +18,11 @@ UnBundle 'godlygeek/tabular'
 UnBundle 'majutsushi/tagbar'
 UnBundle 'terryma/vim-multiple-cursors'
 UnBundle 'mileszs/ack.vim'
+UnBundle 'spf13/vim-autoclose'
 
+au BufRead,BufNewFile *.pp set filetype=puppet
 autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-autocmd FileType ruby,eruby,css,less,javascript setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType ruby,eruby,css,less,javascript,puppet setlocal expandtab shiftwidth=2 softtabstop=2
 
 let g:indentLine_color_term = 237
 
