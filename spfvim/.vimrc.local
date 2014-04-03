@@ -48,3 +48,5 @@ function! CreateTagsFile() abort
   endif
 endfunction
 noremap <silent> <Leader>ct :call CreateTagsFile()<CR>
+
+inoremap <expr> <CR>    pumvisible() ? "\<C-y>\<CR>" : "\<CR>"

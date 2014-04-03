@@ -16,7 +16,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:.
+export PATH=/usr/local/bin:$PATH
 #export GOROOT=/usr/local/go
 #export PATH=$GOROOT/bin:$PATH
 
