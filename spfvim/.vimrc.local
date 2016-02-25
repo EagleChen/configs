@@ -9,24 +9,24 @@ UnBundle 'myusuf3/numbers.vim'
 UnBundle 'mattn/webapi-vim'
 UnBundle 'mattn/gist-vim'
 UnBundle 'scrooloose/nerdcommenter'
-UnBundle 'vim-scripts/restore_view.vim'
 UnBundle 'airblade/vim-gitgutter'
 UnBundle 'tpope/vim-abolish.git'
 UnBundle 'majutsushi/tagbar'
 UnBundle 'terryma/vim-multiple-cursors'
-UnBundle 'mileszs/ack.vim'
 UnBundle 'spf13/vim-autoclose'
 UnBundle 'tpope/vim-markdown'
 UnBundle 'spf13/vim-preview'
-
-Bundle 'Yggdroot/indentLine'
+UnBundle 'godlygeek/tabular'
+UnBundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Shougo/neocomplete.vim'
 
 au BufRead,BufNewFile *.pp set filetype=puppet
 autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-autocmd FileType ruby,eruby,css,less,javascript,puppet setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType ruby,eruby,css,less,puppet,html,scss setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=4 softtabstop=4
 
-let g:indentLine_color_term = 237
-
+set encoding=utf-8
+set nolist
 set nobackup
 set noswapfile
 
@@ -48,3 +48,8 @@ function! CreateTagsFile() abort
   endif
 endfunction
 noremap <silent> <Leader>ct :call CreateTagsFile()<CR>
+
+inoremap <expr> <CR>    pumvisible() ? "\<C-y>\<CR>" : "\<CR>"
+
+let g:airline_left_sep=''
+let g:airline_right_sep=''
