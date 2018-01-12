@@ -1,17 +1,25 @@
 {
 	"default_line_ending": "unix",
 	"ensure_newline_at_eof_on_save": true,
-	"font_face": "Consolas",
-	"font_size": 18.0,
+	"extra_paths":
+	[
+		"/Users/eagle/.virtualpyenvs/kerastest/lib/python3.6/site-packages"
+	],
+	"font_size": 14.0,
 	"highlight_line": true,
+	"hot_exit": false,
+	"ignore_vcs_packages": true,
 	"ignored_packages":
 	[
 	],
+	"python_interpreter": "/Users/eagle/anaconda3/envs/python36/bin/python",
+	"remember_open_files": false,
 	"rulers":
 	[
-		80
+		120
 	],
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }
