@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true
+}
