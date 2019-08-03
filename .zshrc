@@ -5,7 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -15,7 +18,7 @@ ZSH_THEME="robbyrussell"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
+#DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -30,13 +33,10 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(git bundler)
+plugins=(git fasd)
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-RPROMPT="$pfg_cyan%~$pR"
 export CDPATH=.:~:~/Documents/repositories:/Users/eagle/Documents/repositories/gohome/src/bitbucket.org/eaglechen
 
 # disable autocorrect
@@ -50,7 +50,7 @@ export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export GOPATH="$HOME/Documents/repositories/gohome"
-export PATH="$PATH:/usr/local/bin:/usr/X11/bin:$HOME/.rvm/bin:/usr/local/go/bin:$GOPATH/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/usr/local/bin:/usr/X11/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/anaconda3/bin"
 
 unsetopt inc_append_history
 unsetopt share_history
@@ -62,9 +62,15 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
     --disturl=https://npm.taobao.org/dist \
     --userconfig=$HOME/.cnpmrc"
 
-export WORKON_HOME=$HOME/.virtualpyenvs
-export PROJECT_HOME=$HOME/Documents/repositories/pythonproj
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualpyenvs
+#export PROJECT_HOME=$HOME/Documents/repositories/pythonproj
+#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+#source /usr/local/bin/virtualenvwrapper.sh
 
 eval "$(thefuck --alias)"
+alias g11="g++ -std=c++11"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
